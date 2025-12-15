@@ -26,3 +26,7 @@ pnpm-debug.log*
 .tmp/
 tmp/
 
+/blog-api/node_modules/
+/blog-api/dist/
+/blog-app/node_modules/
+/blog-app/dist/
