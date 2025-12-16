@@ -43,15 +43,15 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages} timeZone="UTC">
-      <div className="relative flex min-h-screen flex-col bg-background text-foreground">
+      <div className="relative flex min-h-screen bg-background-dark flex-col text-foreground">
         <SiteHeader initialUser={initialUser} />
         <div className="flex flex-1 overflow-hidden">
-          <SiteSidebar locale={locale} />
+          {/*<SiteSidebar locale={locale} />*/}
           <main className="flex-1 overflow-y-auto px-4 py-6 sm:px-6 md:px-8">
             {children}
           </main>
         </div>
-        <SidebarOverlay />
+        {/*<SidebarOverlay />*/}
         <SiteFooter year={year} />
       </div>
     </NextIntlClientProvider>

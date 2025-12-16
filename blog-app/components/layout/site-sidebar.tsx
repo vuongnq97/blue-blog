@@ -39,10 +39,10 @@ export function SiteSidebar({locale}: {locale: string}) {
           return (
             <Link
               key={translationKey}
-              href={href}
+              href={localizedHref}
               className={cn(
-                "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-foreground/5",
-                isActive && "bg-foreground/10 text-foreground"
+                "rounded-md px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-[#192633]",
+                isActive && "bg-gray-100 dark:bg-[#192633] text-[#111a22] dark:text-white"
               )}
             >
               {t(translationKey)}

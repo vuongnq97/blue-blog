@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BlogSpace - Share Your Story</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111a22",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for carousel */
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111a22] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-[#233648] bg-white/80 dark:bg-[#111a22]/80 backdrop-blur-md">
+<div class="layout-container flex h-full flex-col">
+<div class="px-4 md:px-10 flex justify-center py-3">
+<div class="flex w-full max-w-[1280px] items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg class="h-full w-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] dark:text-white text-[#111a22]">BlogSpace</h2>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 text-gray-700" href="#">Features</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 text-gray-700" href="#">Pricing</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300 text-gray-700" href="#">About</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-transparent border border-gray-300 dark:border-[#324d67] hover:bg-gray-100 dark:hover:bg-[#192633] text-sm font-bold transition-colors">
+<span class="truncate dark:text-white text-[#111a22]">Login</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Button (Placeholder) -->
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined dark:text-white text-[#111a22] cursor-pointer">menu</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center w-full">
+<!-- Hero Section -->
+<section class="w-full flex justify-center py-12 md:py-20 px-4 md:px-10">
+<div class="max-w-[1280px] w-full">
+<div class="@container">
+<div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+<!-- Hero Text -->
+<div class="flex flex-col gap-6 flex-1 lg:max-w-[600px]">
+<div class="flex flex-col gap-4 text-left">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl dark:text-white text-[#111a22]">
+                                        Share Your Story with the World
+                                    </h1>
+<h2 class="text-lg font-normal leading-relaxed text-gray-600 dark:text-gray-300">
+                                        The all-in-one platform for writers, creators, and thinkers. Build your audience, monetize your passion, and join a community of voices today.
+                                    </h2>
+</div>
+<div class="flex flex-wrap gap-4 pt-2">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold shadow-lg shadow-primary/25 transition-all">
+<span>Start Writing for Free</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-transparent border border-gray-300 dark:border-[#324d67] hover:bg-gray-100 dark:hover:bg-[#192633] text-base font-bold dark:text-white text-[#111a22] transition-colors">
+<span>Browse Content</span>
+</button>
+</div>
+<!-- Social Proof -->
+<div class="flex items-center gap-3 mt-4">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#111a22] bg-gray-200 bg-cover bg-center" data-alt="Portrait of a young woman smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCk03EpKToE-3Mjb-Sap78o_XjIcJLQuXm9ZK2kAJ0ALUd0LxeZrS1p0rNLZNU7NRo76cD0BP81RfCgSeZqeWNmEnaSnsS5-wW1cQhC2S-nEXPUNRwe7KYwR2Im1wqWoFjF9Qu-zd2ktQUH4F4U57LA2xHh8ZsVrgc8LFvQrtR0sQvIUIHtjCDJ0cJNTKbZ8zcWE-5FoWYVSUflzXXF1tsIDr5NTg1FE0JzwhjsnBh3R6zdPFe9sBquImRbN6Uknb-sSpK3Zj1qpAw');"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#111a22] bg-gray-200 bg-cover bg-center" data-alt="Portrait of a man looking forward" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACZN2lTEUrpHe4AieO4HhqTJ8Q3jdrBMChj4IpnP8MTOWFYXhw0Qo35bHGrcrHgcF05geFQwNmhnUXZl7uwAB5DSf5aUbi8xzXurZIYC_15eY66SlXCZtboMMlMuuUHPtKlk27fT7dcYmS3YadXlfwi_OvmHVrPdqdrdh0K5sIqhSChB9BhtTPZysOYSOPGcYa8hPWHtr_ujymr0GheLu2YQJEuohKR5QT3m8JE458Mbham-sT3f7YWDrvY73TtHI34DgC5ct5eFc');"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#111a22] bg-gray-200 bg-cover bg-center" data-alt="Portrait of a man smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhTcPTQJyEgVqn9TK55xgdNyf5rNfYtvz6Pf_RpMEURDspkNu48D_7YtrICbhMiYBzXId_RgMPKbr9KGdJZwA7TGbuts1KL-wND3FrrYSOFjHEpmZ5XfE6g9q97zMHSmsTMj4VMnSFDKJgY7VXAF4Pxwhx9I7yB747G1cnf9PJKOEizxkGifsPDwmsH94z93xJMU93BtXQHxdHSbUCkvCUQnQp5IRE2Wv2u3DpTVMtLUiO0GXu2U1HiguadU_wsJZa3_CtXgsDsPY');"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-[#111a22] bg-gray-100 dark:bg-[#233648] flex items-center justify-center text-[10px] font-bold dark:text-white text-[#111a22]">+2k</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Join 2,000+ writers today</p>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="flex-1 w-full lg:h-auto">
+<div class="w-full aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-2xl shadow-2xl shadow-primary/10" data-alt="Abstract 3D illustration of writing tools and books floating in a digital space" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkdgJiwC2GLKynWFbUge7CPX8lvbPE8fFdfm1KoXDhpP7BwAOsgBalYDd2OHfi0oCuKwVPSfX7fO7ndi19OHVRemIGl4a4mLg-HBCq0xSZfc6EW_nLY-djPJ3daZd-qy5eYiig9Bd86fNIZmYegkDEn5WfQEfJyOEuqizKh1nmERvUesh3yGvgLBHx4W_VNIlwhNl2K4aJiS-pTt1vucKqTmozqI-HvfsuIlts5GMB4mTb2tpxQWIqpCGrIfvvPusexafh72bc8oo");'>
+<!-- Overlay gradient for better integration -->
+<div class="w-full h-full bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="w-full bg-gray-50 dark:bg-[#16212b] py-16 px-4 md:px-10">
+<div class="max-w-[1280px] w-full mx-auto flex flex-col gap-10">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<h2 class="text-3xl font-bold leading-tight md:text-4xl dark:text-white text-[#111a22]">
+                            Why Write with Us?
+                        </h2>
+<p class="text-base font-normal leading-normal text-gray-600 dark:text-gray-400 max-w-[720px]">
+                            Everything you need to grow your audience and look good doing it. We handle the tech so you can focus on the words.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#324d67] bg-white dark:bg-[#192633] p-6 hover:shadow-lg transition-shadow duration-300">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">edit_note</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold dark:text-white text-[#111a22]">Easy Editor</h3>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm leading-relaxed">
+                                    Distraction-free writing environment with powerful formatting tools. Just write, we'll format.
+                                </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#324d67] bg-white dark:bg-[#192633] p-6 hover:shadow-lg transition-shadow duration-300">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">analytics</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold dark:text-white text-[#111a22]">Deep Analytics</h3>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm leading-relaxed">
+                                    Track views, reads, and engagement to understand your audience better and grow faster.
+                                </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#324d67] bg-white dark:bg-[#192633] p-6 hover:shadow-lg transition-shadow duration-300">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold dark:text-white text-[#111a22]">Vibrant Community</h3>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm leading-relaxed">
+                                    Connect with other writers and readers in a supportive ecosystem designed for interaction.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Section Header -->
+<section class="w-full px-4 md:px-10 pt-16 pb-4">
+<div class="max-w-[1280px] w-full mx-auto flex items-center justify-between">
+<h2 class="text-2xl md:text-3xl font-bold leading-tight dark:text-white text-[#111a22]">Trending on the Platform</h2>
+<a class="text-primary font-medium hover:underline flex items-center gap-1" href="#">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Carousel / Blog List -->
+<section class="w-full px-4 md:px-10 pb-20">
+<div class="max-w-[1280px] w-full mx-auto">
+<!-- Scroll container -->
+<div class="flex overflow-x-auto no-scrollbar gap-6 pb-4 snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="snap-start flex-none w-full md:w-[380px] flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#324d67] bg-white dark:bg-[#192633] overflow-hidden hover:border-primary/50 transition-colors group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Laptop on a wooden desk with coffee and notebook" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA06s2YcerxHY-rJKd13Fwdw9q_vEVjjuL0NLs73s1s__f6UBtlXZbD0eu5xj2IdimYdA4wy1G6F0KUIZpu0K2ckm0b-9qX30Cd34emNI1BB3BcdSddaSDNnDm9JGHthRM7IwAS9L-G3aiExP4uuv9IVEelH6d8YdF59UaSMjCUM6v9esg2s13paXde19qCke1l5UNp32Acs4uGNMUMdXp9N6pduNoJaDjYU2Q-wsS8RU0JfyfkhHOgRWHmWCePWGyIEOkO9DORvo8");'>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
+<span>Remote Work</span>
+<span class="w-1 h-1 rounded-full bg-gray-400"></span>
+<span class="text-gray-500 dark:text-gray-400">5 min read</span>
+</div>
+<h3 class="text-xl font-bold leading-tight dark:text-white text-[#111a22] group-hover:text-primary transition-colors">
+                                    The Future of Remote Work is Asynchronous
+                                </h3>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm line-clamp-2">
+                                    Why real-time communication is killing productivity and how to fix it with better documentation.
+                                </p>
+<div class="flex items-center gap-3 mt-2 pt-3 border-t border-gray-100 dark:border-[#324d67]">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of Sarah Jenkins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChig47MkblFEMhS0UDIlD0wEChKItWPbBPABmp28McKQoCY0ZKkFMtR31RQJGlu-i9EXl8uf-cwb3K4mJS-FS1xJELzfO07MAdZ1riz-IxP6eFAT6YgqJpfQUCxAE4MkhhBavol9YEMaR4VesVSFiBgcQKhteK_-PwnCzXYuqDxT3X25gz5bhQ9cHypCYVu9DGrjSflcV1d-stYnGH8fDYm7dQ1CcLRp3KgmZhDXf2TeItWxmuNNzyrGokEncbL4JiRaA36N6ggI4');"></div>
+<div class="text-sm">
+<p class="font-semibold dark:text-white text-[#111a22]">Sarah Jenkins</p>
+<p class="text-xs text-gray-500">Oct 24, 2023</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="snap-start flex-none w-full md:w-[380px] flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#324d67] bg-white dark:bg-[#192633] overflow-hidden hover:border-primary/50 transition-colors group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Person standing on a mountain peak looking at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-uUKTYcPqRkadKmZOoD0AzD2p6SkgFoJ7teHMCLansCo-YA510H5MA8fl-EmikjhtZjPoSUcNeu3Zio4jHZ4Czv-fS8luHMPmXu6YEuhWjBo7P6wKFpmvV7dmZ4JoFdvtvbD8adlx1TR5y45cIzLhHFlE7GGHYKxQzEvyZ85KQ8I29uDAzaMrseeZGuflju17dcuaACMgRTYv-LTeb7qm8xa2sTmjM64H1JrC9BroLdT9N5SvNGn1UieW5xw8aP4s2iMdKrcVNxQ");'>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
+<span>Travel</span>
+<span class="w-1 h-1 rounded-full bg-gray-400"></span>
+<span class="text-gray-500 dark:text-gray-400">8 min read</span>
+</div>
+<h3 class="text-xl font-bold leading-tight dark:text-white text-[#111a22] group-hover:text-primary transition-colors">
+                                    Capturing the Wild: A Photographer's Journey
+                                </h3>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm line-clamp-2">
+                                    Essential gear and tips for landscape photography in extreme weather conditions.
+                                </p>
+<div class="flex items-center gap-3 mt-2 pt-3 border-t border-gray-100 dark:border-[#324d67]">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of David Miller" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCm0k_qbPMo-pgyGYMby5cY4oIYwqrKdnYZAIBX1rzUEBaCQ-rwO6hGXGR8qkzjRjYtZWnYrBgG7QWajRUA5bGD6a4ZuqxAD-4uSvKcOX-OAFpG2EuZvq8aEjntBIHZbpCLQ-HPOXk-f3QnWx-BgcUDI4cLmUBPvePMYSsQSSXXF_HpbEekT5i0vcogVVm6cebNBnIDBku_tWJKYELetj2DdHI2-bYhZH8VRhrvuk7VwLGkjFQtnDTJzATVtOv907D5J7EOsFBKugQ');"></div>
+<div class="text-sm">
+<p class="font-semibold dark:text-white text-[#111a22]">David Miller</p>
+<p class="text-xs text-gray-500">Oct 22, 2023</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="snap-start flex-none w-full md:w-[380px] flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#324d67] bg-white dark:bg-[#192633] overflow-hidden hover:border-primary/50 transition-colors group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Modern gadgets including smartphone and smartwatch on a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLFdnXaffJSMYtCo0WgzwmUuNJhS_a9n5cuquZtjZsu7msBf2X5cHQExBYNwiwLIsGtKnHWkjHaO1Grdz5skoupeEamV4lgpiRQyqUhv1p-ggqMQ6AqCE4CCUpgnYgXsyFOCjcEMyKOX9t-BUSbeovGZofyzELB5fMU5qo5807iOC7TDqYcGu5OPp4z0DHtDGq26cihmm1LgUUctJwTxc2n7tSpz9GjmU_dKV3yxXvXgtloOipg6BF3vBCF6HSK5QzHeX2VK9tqRA");'>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
+<span>Technology</span>
+<span class="w-1 h-1 rounded-full bg-gray-400"></span>
+<span class="text-gray-500 dark:text-gray-400">3 min read</span>
+</div>
+<h3 class="text-xl font-bold leading-tight dark:text-white text-[#111a22] group-hover:text-primary transition-colors">
+                                    Top 10 Gadgets of 2024 You Can't Miss
+                                </h3>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm line-clamp-2">
+                                    A curated list of the most innovative tech releases this year that are actually worth the money.
+                                </p>
+<div class="flex items-center gap-3 mt-2 pt-3 border-t border-gray-100 dark:border-[#324d67]">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of TechInsider rep" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjvUIdzu6MASkl2WtdzfdEFJssoBnrtcrCcVfNiakB40ITZEFlXRppL4gc0jb9MoR4ojhWuoU8NrRhxiOuOgQz8gO4t5bUSRb3awP4c_9UAV-HYb_5geK7YNjMGrz9OfStID31BX9xaKmbv49nJPB5ujIF0T1J2ZGsMmflp7ok7kJ1Rbqveoq01cnr-tX6127KuPWUWzB3dwnTOyA4v6R3jtskOzmvQK7D3W83hGq6Yf0Tnob4ouho1I7-uDMFtf0SeVINweoZZWs');"></div>
+<div class="text-sm">
+<p class="font-semibold dark:text-white text-[#111a22]">TechInsider</p>
+<p class="text-xs text-gray-500">Oct 20, 2023</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 (Added for carousel fullness) -->
+<div class="snap-start flex-none w-full md:w-[380px] flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#324d67] bg-white dark:bg-[#192633] overflow-hidden hover:border-primary/50 transition-colors group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A bowl of healthy green salad" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAm4MWvXew89xwcHD7O99ypS4Uh_4MJ7z3bZVkVjkuIeISXFeBVAr5P3FV-rUu_bE_AJIvHg104gl60dYeKosiN-u0_JI0FSjiikW5kOOmFE5gj3_C18Tdf3HdTBUeAMLu3cLIYOuM802ITAudcLM709CLAg8npq73J8du62I4v_zyHtAfWd5y6s1XriRu9swts0rlAnFMrOIQXENiDNVOxIQSnnp-CpZicjHyegObHLrGj-iTWR_EPV5P_8KBI3z-xprYpEjTr02A");'>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-xs font-medium text-primary uppercase tracking-wider">
+<span>Lifestyle</span>
+<span class="w-1 h-1 rounded-full bg-gray-400"></span>
+<span class="text-gray-500 dark:text-gray-400">6 min read</span>
+</div>
+<h3 class="text-xl font-bold leading-tight dark:text-white text-[#111a22] group-hover:text-primary transition-colors">
+                                    Mindful Eating for a Busy Life
+                                </h3>
+<p class="text-gray-500 dark:text-[#92adc9] text-sm line-clamp-2">
+                                    Simple habits to improve your relationship with food without strict dieting.
+                                </p>
+<div class="flex items-center gap-3 mt-2 pt-3 border-t border-gray-100 dark:border-[#324d67]">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of Emma Stone" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzjGHoSS6zGeVKTz712ChxzXg-8TI3XmuzAmYWBjyfKbrR7VSNL_Smmcy4nR1YD0zQ025Zkwd3uxwzoza9NMOFBZ5oBa80UHiRfaEZf1Nq6vAHQ5aQ0meKO0Zufd6WTqAH93rYcWXkNbfQLzU7V1m3DvuAj2KoBcFgpg3rzd7v8Kb_em0Q3xIXQDjO9XzihBeYc_pOTQfwaUU0Xl0YXo70l1n3TNMJBCaJiWV2qmCuKsJdlHTeppdh4eYcMaAde5IQ656dutHKUMU');"></div>
+<div class="text-sm">
+<p class="font-semibold dark:text-white text-[#111a22]">Emma Stone</p>
+<p class="text-xs text-gray-500">Oct 18, 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-gray-200 dark:border-[#233648] bg-white dark:bg-[#111a22] py-12 px-4 md:px-10">
+<div class="max-w-[1280px] w-full mx-auto flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4 max-w-xs">
+<div class="flex items-center gap-2">
+<div class="size-6 text-primary">
+<svg class="h-full w-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-xl font-bold dark:text-white text-[#111a22]">BlogSpace</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">
+                        The platform where ideas find their voice. Built for creators, by creators.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-10 md:gap-20">
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">Product</h4>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Features</a>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Integrations</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">Resources</h4>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Guides</a>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">Company</h4>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Blog</a>
+<a class="text-sm text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#">Careers</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] w-full mx-auto mt-12 pt-8 border-t border-gray-100 dark:border-[#324d67] flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-gray-400 dark:text-gray-500">© 2024 BlogSpace Inc. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">flutter_dash</span></a> <!-- Bird/Twitter icon placeholder -->
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a> <!-- Camera/IG icon placeholder -->
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

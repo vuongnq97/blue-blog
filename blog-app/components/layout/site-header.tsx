@@ -1,6 +1,7 @@
 "use client";
 
 import {useCallback, useState} from "react";
+import Link from "next/link";
 import {MenuIcon} from "lucide-react";
 import {useTranslations} from "next-intl";
 
@@ -30,7 +31,7 @@ export function SiteHeader({initialUser = null}: SiteHeaderProps) {
   const effectiveOpen = loginOpen && !user;
 
   return (
-    <header className="sticky top-0 z-30 border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-30 border-b border-gray-200 dark:border-accent-dark bg-white/80 dark:bg-background-dark/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-background-dark/60">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 md:px-8">
         <Button
           variant="ghost"
@@ -42,9 +43,21 @@ export function SiteHeader({initialUser = null}: SiteHeaderProps) {
           <MenuIcon className="h-5 w-5" aria-hidden="true" />
         </Button>
         <p className="text-lg font-semibold sm:text-xl">{t("title")}</p>
-        <div className="flex items-center gap-2">
+        {/* Desktop navigation */}
+        <nav className="ml-auto hidden items-center gap-6 md:flex">
+          <Link href="#features" className="text-sm font-medium text-gray-600 dark:text-gray-300 transition-colors hover:text-primary">
+            Features
+          </Link>
+          <Link href="#pricing" className="text-sm font-medium text-gray-600 dark:text-gray-300 transition-colors hover:text-primary">
+            Pricing
+          </Link>
+          <Link href="#about" className="text-sm font-medium text-gray-600 dark:text-gray-300 transition-colors hover:text-primary">
+            About
+          </Link>
+        </nav>
+        <div className="hidden items-center gap-2 md:flex">
           {(initialUser ?? user) ? (
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-gray-500 dark:text-gray-400">
               {user && typeof user === "object" && "name" in user && typeof user.name === "string"
                 ? user.name
                 : t("signedIn")}

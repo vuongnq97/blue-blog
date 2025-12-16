@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --font-geist-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -67,10 +68,22 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Custom palette from mockups for use as Tailwind color tokens */
+  --color-background-dark: #111a22;
+  --color-surface-dark: #192633;
+  --color-border-dark: #324d67;
+  --color-accent-dark: #233648;
+  --color-text-secondary: #92adc9;
+  --color-muted-dark: #16212b;
+  --color-primary: #3e82f7;
 }
 
 @layer base {
   body {
-    @apply font-sans
+    @apply font-sans text-white;
   }
 }
+
+/* Utilities */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
