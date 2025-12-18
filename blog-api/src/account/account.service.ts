@@ -8,8 +8,10 @@ export interface AccountProfile {
 @Injectable()
 export class AccountService {
   getAccountProfile(id: string): AccountProfile {
+    console.log(id);
     return {
       name: 'John Doe',
-    email: '2SS@@'};
+      email: '2SS@@',
+    };
   }
 }

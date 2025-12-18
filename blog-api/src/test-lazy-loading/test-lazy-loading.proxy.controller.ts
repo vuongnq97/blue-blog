@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { LazyModuleLoader, ModuleRef } from '@nestjs/core';
 import { TestLazyLoadingController } from './test-lazy-loading.controller';
-import {Public} from "../auth/decorators/public.decorator";
+import { Public } from '../auth/decorators/public.decorator';
 
 @Controller('test-lazy-loading')
 export class TestLazyLoadingProxyController {
@@ -14,9 +14,7 @@ export class TestLazyLoadingProxyController {
   async getStatus() {
     if (!this.moduleRef) {
       this.moduleRef = await this.lazyModuleLoader.load(() =>
-        import('./test-lazy-loading.module.js').then(
-          (m) => m.TestLazyLoadingModule,
-        ),
+        import('./test-lazy-loading.module.js').then((m) => m.TestLazyLoadingModule),
       );
     }
 

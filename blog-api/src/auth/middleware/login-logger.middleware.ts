@@ -6,6 +6,7 @@ export class LoginLoggerMiddleware implements NestMiddleware {
   private readonly logger = new Logger(LoginLoggerMiddleware.name);
 
   use(req: Request, _res: Response, next: NextFunction) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     this.logger.log(`Login attempt for ${req.body?.email ?? 'unknown email'}`);
     next();
   }
